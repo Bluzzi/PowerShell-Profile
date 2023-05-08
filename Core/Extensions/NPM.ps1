@@ -1,5 +1,6 @@
 # NPM:
-Save-Module npm-completion
+$moduleName = "npm-completion"
+Save-Module $moduleName
 
 # PNPM:
 Register-ArgumentCompleter -CommandName 'pnpm' -ScriptBlock {

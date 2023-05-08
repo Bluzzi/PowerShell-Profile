@@ -1,4 +1,5 @@
-Save-Module posh-git
+$moduleName = "posh-git"
+Save-Module $moduleName
 
 $GitPromptSettings.BeforeStatus.ForegroundColor = [ConsoleColor]::DarkGray
 $GitPromptSettings.BeforeStatus.Text = "["
