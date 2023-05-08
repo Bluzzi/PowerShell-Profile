@@ -10,7 +10,7 @@ My PowerShell configuration for an efficient CLI. Compatible with any operating 
 - open the previously installed PowerShell
 - `mkdir $PROFILE/..`: create the folder that will contain this PowerShell profile
 - `cd $PROFILE/..`: move to the folder you just created  
-- `git clone https://github.com/Bluzzi/PowerShell-Profile.git .`: clone this repo in the 
+- `git clone https://github.com/Bluzzi/PowerShell-Profile.git .`: clone this repo in the current directory
 - reload your PowerShell
 
 Everything should work! 🎉
