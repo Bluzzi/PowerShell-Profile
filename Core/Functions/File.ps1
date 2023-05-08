@@ -10,6 +10,6 @@ function path([string] $path) {
 .DESCRIPTION
 Open the path in your explorer.
 #>
-function x([string] $path) { 
+function x { 
   explorer (path $args)
 }
