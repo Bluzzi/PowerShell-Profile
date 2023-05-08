@@ -1,14 +1,25 @@
 Save-Module posh-git
 
-$GitPromptSettings.BeforeStatus.Text = "[ "
-$GitPromptSettings.AfterStatus.Text = " ]"
+$GitPromptSettings.BeforeStatus.ForegroundColor = [ConsoleColor]::DarkGray
+$GitPromptSettings.BeforeStatus.Text = "["
+
+$GitPromptSettings.AfterStatus.ForegroundColor = [ConsoleColor]::DarkGray
+$GitPromptSettings.AfterStatus.Text = "]"
+
+$GitPromptSettings.BranchColor.ForegroundColor = [ConsoleColor]::Green
 
 function prompt {
-  $s = Get-GitStatus
+  $gitStatus = Get-GitStatus
+  $path = (Get-Location).Path 
+  $arrow = Write-Prompt " > " -ForegroundColor ([ConsoleColor]::White)
 
-  if (-not $s) {
-    "$((Get-Location).Path)$(if ($nestedpromptlevel -ge 1) { ' >>' }) ❯ "
-  } else {
-    "$($PWD -replace ".*?($($s.RepoName).*)", '$1')$(Write-VcsStatus) ❯ "
+  # Not in a repository:
+  if (-not $gitStatus) {
+    return "$($path)$($arrow)"
   }
+
+  # In a repository:
+  $repoRelativePath = Write-Prompt ($path -replace ".*?($($gitStatus.RepoName).*)", '$1') -ForegroundColor ([ConsoleColor]::White)
+  
+  return "$($repoRelativePath)$(Write-VcsStatus)$($arrow)"
 }
