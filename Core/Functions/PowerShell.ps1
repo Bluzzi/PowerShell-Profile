@@ -1,0 +1,3 @@
+function Restart-PowerShell {
+  . $PROFILE
+}

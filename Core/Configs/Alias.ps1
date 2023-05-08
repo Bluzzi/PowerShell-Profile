@@ -1,0 +1,1 @@
+Set-Alias -Name "reload" -Value Restart-PowerShell
