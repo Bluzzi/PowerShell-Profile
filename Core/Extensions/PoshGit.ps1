@@ -1,7 +1,7 @@
 Save-Module posh-git
 
-$GitPromptSettings.BeforeStatus.Text = '[ '
-$GitPromptSettings.AfterStatus.Text = ' ]'
+$GitPromptSettings.BeforeStatus.Text = "[ "
+$GitPromptSettings.AfterStatus.Text = " ]"
 
 function prompt {
   $s = Get-GitStatus
