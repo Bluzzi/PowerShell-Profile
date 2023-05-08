@@ -1,4 +1,4 @@
-Import-Module posh-git
+Save-Module posh-git
 
 $GitPromptSettings.BeforeStatus.Text = '[ '
 $GitPromptSettings.AfterStatus.Text = ' ]'
