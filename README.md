@@ -11,6 +11,15 @@ My PowerShell configuration for an efficient CLI. Compatible with any operating 
 - `mkdir $PROFILE/..`: create the folder that will contain this PowerShell profile
 - `cd $PROFILE/..`: move to the folder you just created  
 - `git clone https://github.com/Bluzzi/PowerShell-Profile.git .`: clone this repo in the 
+- reload your PowerShell
+
+Everything should work! 🎉
 
 ## Features
-...
+- [Zoxide](https://github.com/ajeetdsouza/zoxide): efficient file navigation
+- [Posh-Git](https://github.com/dahlbyk/posh-git): git support
+- Auto-completion
+- Base64 encode/decode functions (`btoa`, `atob`)
+- Command line environment variable for every OS `we PORT=3000 pnpm run dev`
+- Git utils (`get-branchs`, `get-commits`)
+- NPM & PNPM support
