@@ -14,3 +14,4 @@
 
 . "$PSScriptRoot\Core\Configs\PSReadLine.ps1"
 . "$PSScriptRoot\Core\Configs\Alias.ps1"
+. "$PSScriptRoot\Core\Configs\Env.ps1"
