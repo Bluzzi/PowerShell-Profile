@@ -23,3 +23,4 @@ Everything should work! 🎉
 - Command line environment variable for every OS `we PORT=3000 pnpm run dev`
 - Git utils (`get-branchs`, `get-commits`)
 - NPM & PNPM support
+- Load the `.env` (next to `$PROFILE`)
