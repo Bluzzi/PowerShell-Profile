@@ -7,6 +7,7 @@
 . "$PSScriptRoot\Core\Functions\Module.ps1"
 . "$PSScriptRoot\Core\Functions\PowerShell.ps1"
 . "$PSScriptRoot\Core\Functions\Admin.ps1"
+. "$PSScriptRoot\Core\Functions\PipelineWatch.ps1"
 
 . "$PSScriptRoot\Core\Extensions\Zoxide.ps1"
 . "$PSScriptRoot\Core\Extensions\PoshGit.ps1"
