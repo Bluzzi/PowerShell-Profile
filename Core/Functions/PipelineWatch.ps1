@@ -4,4 +4,4 @@ function pw([string] $branch) {
   $branchName = ($branch) ? "$branch" : "$currentBranch"
 
   we NODE_OPTIONS=--no-warnings pipeline-watch -p meta -b $branchName
-}²
+}
