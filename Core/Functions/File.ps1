@@ -1,15 +1,29 @@
 <#
-.DESCRIPTION
-Converts a path to its absolute representation without a trailing backslash.
+  .SYNOPSIS
+  Converts a path to its absolute representation without a trailing backslash.
 #>
-function path([string] $path) { 
-  (Convert-Path $path) -replace '\\$'
-}
+function Get-AbsolutePath {
+  param(
+    [Parameter(Mandatory = $true)]
+    [ValidateScript({
+      if (Test-Path -Path $_ -PathType Container) {
+        $true
+      } else {
+        throw "The specified path '$_' does not exist."
+      }
+    })]
+    [string] $path
+  )
 
-<#
-.DESCRIPTION
-Open the path in your explorer.
-#>
-function x { 
-  explorer (path $args)
+  try {
+    $absolutePath = Convert-Path $path
+
+    if ($absolutePath.EndsWith("\")) {
+      $absolutePath = $absolutePath.TrimEnd("\")
+    }
+
+    return $absolutePath
+  } catch {
+    Write-Error "An error occurred while converting the path: $_"
+  }
 }
