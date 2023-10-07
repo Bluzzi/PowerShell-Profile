@@ -1,5 +1,6 @@
+. "$PSScriptRoot\Core\Commands\Get-AbsolutePath\Get-AbsolutePath.Cmd.ps1"
+
 . "$PSScriptRoot\Core\Functions\Function.ps1"
-. "$PSScriptRoot\Core\Functions\File.ps1"
 . "$PSScriptRoot\Core\Functions\Color.ps1"
 . "$PSScriptRoot\Core\Functions\Base64.ps1"
 . "$PSScriptRoot\Core\Functions\Git.ps1"
