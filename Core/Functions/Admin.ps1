@@ -1,7 +1,7 @@
 function sudo {
   param (
     [Parameter(Position = 0, Mandatory = $true, ValueFromRemainingArguments = $true)]
-    [String]$Command
+    [String] $Command
   )
   
   $script = $Command

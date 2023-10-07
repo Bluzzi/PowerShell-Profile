@@ -2,7 +2,7 @@ $profileDirectory = [System.IO.Path]::GetDirectoryName($PROFILE)
 $envFilePath = Join-Path -Path $profileDirectory -ChildPath ".env"
 
 if (Test-Path $envFilePath) {
-  Get-Content $envFilePath | foreach {
+  Get-Content $envFilePath | ForEach-Object {
     $name, $value = $_.split('=')
 
     if ([string]::IsNullOrWhiteSpace($name) || $name.Contains('#')) {
