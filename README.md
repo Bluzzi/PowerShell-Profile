@@ -24,3 +24,8 @@ Everything should work! 🎉
 - Git utils (`get-branchs`, `get-commits`)
 - NPM & PNPM support
 - Load the `.env` (next to `$PROFILE`)
+
+## Unit tests
+[Pester](https://pester.dev/) is used for unit testing. Here are the commands for running the tests.
+- `Install-Module -Name Pester -Force -AllowClobber`
+- `Invoke-Pester` or `Invoke-Pester -Path $PROFILE/..`
