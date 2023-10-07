@@ -4,10 +4,10 @@
 #>
 function Get-AbsolutePath {
   param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $True)]
     [ValidateScript({
       if (Test-Path -Path $_ -PathType Container) {
-        $true
+        $True
       } else {
         throw "The specified path '$_' does not exist."
       }
