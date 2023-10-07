@@ -7,8 +7,15 @@ jobs:
     name: Ubuntu
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - name: Run Pester
+        shell: pwsh
+        run: Invoke-Pester
+  windows:
+    name: Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
       - name: Run Pester
         shell: pwsh
         run: Invoke-Pester
