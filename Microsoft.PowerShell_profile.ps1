@@ -13,12 +13,12 @@ foreach ($FilePath in Get-ChildItem -Path "$PSScriptRoot\Core\Functions" -File) 
   . $FilePath
 }
 
-# Auto-load extensions:
-foreach ($FilePath in Get-ChildItem -Path "$PSScriptRoot\Core\Extensions" -File) {
+# Auto-load configs:
+foreach ($FilePath in Get-ChildItem -Path "$PSScriptRoot\Core\Configs" -File) {
   . $FilePath
 }
 
-# Auto-load configs:
-foreach ($FilePath in Get-ChildItem -Path "$PSScriptRoot\Core\Configs" -File) {
+# Auto-load extensions:
+foreach ($FilePath in Get-ChildItem -Path "$PSScriptRoot\Core\Extensions" -File) {
   . $FilePath
 }
