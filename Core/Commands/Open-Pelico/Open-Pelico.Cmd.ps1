@@ -2,6 +2,7 @@ enum PelicoWebsite {
   App
   Ibis
   Flamingo
+  Shoebill
 }
 
 function Open-Pelico {
@@ -21,6 +22,10 @@ function Open-Pelico {
 
     ([PelicoWebsite]::Flamingo) {
       $URL = "$env:PELICO_URL/flamingo/api/graphql"
+    }
+
+    ([PelicoWebsite]::Shoebill) {
+      $URL = "$env:PELICO_URL/shoebill/api/graphql/graphql"
     }
 
     Default {
