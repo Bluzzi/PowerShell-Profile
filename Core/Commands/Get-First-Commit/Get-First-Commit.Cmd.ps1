@@ -10,6 +10,5 @@ function Get-First-Commit {
 
   $FirstCommitHash = git log --oneline --reverse $BranchsDiff | ForEach-Object { $_.Split(" ")[0] } | Select-Object -First 1 
 
-  Write-Host $FirstCommitHash
   return $FirstCommitHash
 }
