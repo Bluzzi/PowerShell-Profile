@@ -38,3 +38,8 @@ Everything should work! 🎉
 - https://learn.microsoft.com/en-us/powershell/scripting/developer/cmdlet/parameter-aliases?view=powershell-7.3
 - https://riptutorial.com/powershell/example/29958/parameter-validation 
 - https://learn.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters?view=powershell-7.3
+- https://github.com/dahlbyk/posh-git
+- https://github.com/mithrandyr/SimplySql
+- https://github.com/Sebazzz/PSMenu
+- https://github.com/devblackops/Terminal-Icons
+- https://github.com/jborean93/PSGhost
